@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (response.body.error) {
             callback('cant able to acces the coordinate', undefined)
         } else {
-            callback(undefined, 'it is ' +response.body.current.temperature+ ' degree out and it feels like ' +response.body.current.feelslike+' degree out there'
+            callback(undefined, 'the weather is ' +response.body.current.weather_descriptions + ', it is ' +response.body.current.temperature+ ' degree out and it feels like ' +response.body.current.feelslike+' degree out there'
             )
         }
     })
